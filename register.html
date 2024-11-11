@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formcss.css">
+    <script>
+        window.addEventListener("load", function() {
+            document.body.style.backgroundImage = "none";
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="square" style="--i:5;"></div>
+            <div class="form-box">
+                <div class="form-value">
+                    <form action="">
+                        <h2>SFM register<br>employed</h2>
+                        <div class="inputbox">
+                            <img class="icon" src="user-solid.png" height="15px" width="15px">
+                            <input id="nameReg" type="text" required>
+                            <label for="">Nom d'utilisateur :</label>
+                        </div>
+                        <div class="inputbox">
+                            <img class="icon" src="envelope-solid.png" height="15px" width="15px">
+                            <input class="domReg" type="email" required>
+                            <label for="">Adresse Email :</label>
+                        </div>
+                        <div>
+                            <p class="otherUseIt" style="color: red;">Cet adresse email est deja utiliser par un autre utilisateur...</p> 
+                        </div>
+                        <div class="inputbox">
+                            <input class="firstPasswordReg" type="password" required>
+                            <label for="">Mot de passe :</label>
+                        </div>
+                    </form>
+                    <div class="other-connect">
+                        <p>Essayer d'une autre maniere</p>
+                        <div class="option">
+                            <a href="#"><img src="linkedin.png"></a>
+                            <a href="#"><img src="github.png"></a>
+                            <a href="#"><img src="discord.png"></a>
+                        </div>
+                    </div>
+                    <button id="signup">Create</button>
+                    <div class="register">
+                        <p>I have an account <a href="form-css.html">Connect</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

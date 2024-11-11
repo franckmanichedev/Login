@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Euclid Circular A";
+        }
+
+        .home-content{
+            padding: 100px auto;
+        }
+
+        .speciality{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .menu-items{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: 250px;
+            flex: 1 1 250px;
+            max-width: 250px;
+        }
+
+        .img-plat{
+            height: auto;
+            width: 100%;
+        }
+
+        .buy{
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            background-color: yellow;
+        }
+        .plat-special{
+            padding: 1em 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-content">
+        <div class="speciality">
+            <div class= "d-flex flex-column justify-content-center menu-items">
+                <img class="img-plat" src="images/bg (3).jpg" alt="repas">
+                <div class="plat-special">
+                    <h4 class="noms-menu">Titre du repas</h4>
+                    <p>Difficulty</p>
+                    <p class="price"></p>
+                </div>
+                <button class="buy"><a href="formulaire.html">Acheter</a></button>
+            </div>
+            <div class= "d-flex flex-column justify-content-center menu-items">
+                <img class="img-plat" src="images/bg (3).jpg" alt="repas">
+                <div class="d-flex flex-column plat-special">
+                    <h4 class="noms-menu">Titre du repas</h4>
+                    <p>Difficulty</p>
+                    <p class="price"></p>
+                </div>
+                <button class="buy"><a href="formulaire.html">Acheter</a></button>
+            </div>
+            <div class= "d-flex flex-column justify-content-center menu-items">
+                <img class="img-plat" src="images/bg (3).jpg" alt="repas">
+                <div class="d-flex flex-column plat-special">
+                    <h4 class="noms-menu">Titre du repas</h4>
+                    <p>Difficulty</p>
+                    <p class="price"></p>
+                </div>
+                <button class="buy"><a href="formulaire.html">Acheter</a></button>
+            </div>
+            <div class= "d-flex flex-column justify-content-center menu-items">
+                <img class="img-plat" src="images/bg (3).jpg" alt="repas">
+                <div class="d-flex flex-column plat-special">
+                    <h4 class="noms-menu">Titre du repas</h4>
+                    <p>Difficulty</p>
+                    <p class="price"></p>
+                </div>
+                <button class="buy"><a href="formulaire.html">Acheter</a></button>
+            </div>
+            <input type="number" id="qte" value="1">
+        </div>
+    </div>
+    <script>
+        const qte = document.getElementById('qte');
+        const prixPossibles = [2000, 2500, 3000, 3500, 4000, 4500, 5000]; // Tableau de prix possibles
+        const elementPrix = document.querySelectorAll('.price'); // Obtenez l'élément HTML avec l'ID 'price'
+
+        // Génération du prix aléatoire
+        elementPrix.forEach(elements => {
+            const indexAleatoire = Math.floor(Math.random() * prixPossibles.length); // Index aléatoire
+            const prixAleatoire = prixPossibles[indexAleatoire]; // Le prix aléatoire
+            // Affichage du prix
+            elements.textContent = prixAleatoire; // Affiche le prix dans l'élément HTML
+            
+            //Afficher le prix total a l'ajout du nombre
+            qte.addEventListener('input', function(){
+                const qteValue = qte.value;
+                if(qteValue < 1){
+                    qteValue = 1;
+                }
+                const prixTotal = qte.value * prixAleatoire;
+                elements.textContent = `Prix Total : ${prixTotal} CFA`;
+            });
+        })
+    </script>
+</body>
+</html>

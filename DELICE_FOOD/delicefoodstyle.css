@@ -1,0 +1,698 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+main{
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: yellow;
+    color: rgb(68, 68, 68);
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: white;
+}
+
+.spinner-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25% 50%;
+    width: 50px;
+    --b: 8px; /* the border thickness */
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 1px;
+    background: conic-gradient(#0000 10%,yellow) content-box;
+    -webkit-mask:
+        repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+        radial-gradient(farthest-side,#0000 calc(100% - var(--b) - 1px),#000 calc(100% - var(--b)));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation: s4 1s infinite steps(10);
+}
+@keyframes s4 {to{transform: rotate(1turn)}}
+
+#header{
+    background-image: url("images/bg\ \(4\).jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    color: white;
+    /* padding: 50px 100px 0; */
+    height: auto;
+    backdrop-filter: blur(10px);
+}
+
+.accueil{
+    padding: 50px 100px 0;
+}
+
+.hamburger-btn{
+    display: none;
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.close-btn{
+    display: none;
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+header{
+    margin-top: 25px;
+    backdrop-filter: blur(5px);
+    padding: 10px 100px;
+    transition: all 0.3s;
+}
+
+header nav ul a{
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+header nav ul{
+    display: flex;
+    gap: 5em;
+}
+
+header nav ul a:hover{
+    padding: 10px 5px;
+    border-radius: 5px;
+    /* border-top: 1px solid yellow;
+    border-left: 1px solid yellow;
+    border-right: 5px solid yellow;
+    border-bottom: 5px solid yellow; */
+    border:  1px solid yellow;
+    color: yellow;
+}
+
+.site-header {
+    position: relative; /* Une transition douce */
+}
+
+.sticky {
+    position: fixed; /* Rendre le header fixe */
+    top: 0; /* Fixe en haut de la page */
+    width: 100%; /* Prend toute la largeur */
+    z-index: 1000; /* Assure que le header est au-dessus du contenu */
+}
+
+/*Partie d'apropos*/
+#apropos{
+    height: 65vh;
+    width: 100%;
+    padding: 0px 100px;
+    gap: 5em;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.apropos h3{
+    margin-bottom: 1em;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.img-cadre{
+    /*position: relative;*/
+    overflow: visible;
+    height: 300px;
+    width: 100%;
+}
+
+.img-cadre img{
+    position: relative;
+    z-index: 10;
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cadre{
+    margin: 2em;
+    padding: 0px 0 200px 250px;
+    border: 7px solid #ffff00;
+    position: absolute;
+    right: 4%;
+    top: 80%;
+    z-index: 1;
+    transition: top 1s ease-out;
+}
+
+.slide-in{
+    transform: translateX(10%);
+    opacity: 0;
+    transition: transform 2s ease-out, opacity 2s ease-out;
+}
+
+.slide-in.show{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.slide-in.show .cadre{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*Partie des menus*/
+
+#special {
+    padding: 25px 100px;
+    width: 100%;
+    background-image: url("images/bg\ \(5\).jpg");
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search{
+    justify-content: space-between;
+    width: 100%;
+}
+
+.search h3{
+    margin: 1em 0 1em;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+}
+
+/* .search input{
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    padding: 1px 10px;
+    color: #000;
+} */ 
+
+/*Search bar*/
+.body {
+    display: flex;
+}
+  
+.container {
+    margin: 0 auto;
+    background: #fff;
+    height: 35px;
+    border-radius: 30px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 0, 1);
+}
+
+.container:hover .search-bar {
+    width:250px;
+}
+
+.container .search-bar {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+}
+  
+.container .btn .search {
+    color: yellow;
+}
+
+#reserve h3{
+    margin: 1em auto 1em;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.speciality{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.menu-items{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+    flex: 1 1 250px;
+    max-width: 250px;
+}
+
+.img-plat{
+    height: auto;
+    width: 100%;
+}
+
+.buy{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.plat-special{
+    padding: 1em 10px 0;
+}
+
+/*Partie de contact*/
+#contact{
+    height: auto;
+    padding: 50px 100px;
+    gap: 25px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.input-message {
+    width: 100%; /* Ajustez selon vos besoins */
+    height: 200px; /* Ajustez pour la hauteur */
+    font-size: 16px; /* Ajustez la taille de la police selon vos besoins */
+    padding: 10px; /* Ajoute un remplissage interne */
+}
+
+.img-contact img{
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.img-contact img.animate{
+    animation: entrer 2s ease-in forwards;
+    opacity: 1;
+}
+
+@keyframes entrer{
+    0%{
+        transform: translateX(-50%);
+        opacity: 0.1;
+        transition: transform 2s ease-out, opacity 2s ease-out;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+/*Footer part*/
+footer{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 50px 100px 20px;
+    background-image: url(images/reser/reserve\ \(1\).jpg);
+    width: 100%;
+}
+
+.pied-page li a,
+.pied-page a{
+    transition: 0.5s;
+    color: white;
+}
+
+footer a:hover,
+.pied-page li a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+
+footer h5{
+    font-weight: bold;
+    padding-bottom: 10px;
+    width: 3em;
+    border-bottom: 3px solid yellow;
+}
+
+.liens a {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 2px 10px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    transition: 0.5s;
+}
+
+
+.liens a:nth-child(1):hover{
+    background-color: blue; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.liens a:nth-child(2):hover {
+    background: linear-gradient(45deg, #E1306C, #F77737, #C13584);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.liens a:nth-child(3):hover {
+    background: #0077B5;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pied-page{
+    width: 250px;
+    height: auto;
+    gap: 10px;
+}
+
+.other-info i{
+    font-size: 25px;
+}
+
+.copyright{
+    text-align: center;
+    width: 100%;
+    padding-top: 2em;
+    margin-top: 2em;
+    border-top: 1px solid white;
+}
+
+/* MISES EN FORME DE RESERVATIONS */
+
+.hero{
+    background-image: url("images/reser/reserve\ \(2\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#reserve{
+    padding: 50px 100px;
+}
+    
+#reserve h3{
+    text-align: center;
+}
+
+#reserve form{
+    height: auto;
+    width: 100%;
+}   
+
+#reserve form input{
+    height: 2rem;
+    width: 300px;
+    margin-bottom: 2rem;
+    background-color: rgb(32, 32, 32);
+    border: none;
+    border-radius: 3px;
+    padding: 0 0.5rem;
+    color: white;
+}
+
+#reserve form div p{
+    margin-bottom: 0.5rem;
+}
+
+.curseur{
+    cursor: text;
+    color: white;
+}
+
+.img-cadre1{
+    /*position: relative;*/
+    overflow: visible;
+    height: 300px;
+}
+
+.img-cadre1 img{
+    position: relative;
+    z-index: 10;
+    height: 250px;
+    width: auto;
+    object-fit: cover;
+}
+
+.cadre1{
+    margin: 2em;
+    padding: 0px 0 200px 350px;
+    border: 7px solid yellow;
+    position: absolute;
+    right: 1%;
+    top: 40%;
+    z-index: 1;
+}
+
+@media (max-width: 950px){
+    #header{
+        background-position-x: right;
+    }
+    /*Header*/
+    .site-header{
+        padding: 10px 50px;
+    }
+
+    /*Accueil*/
+    .hamburger-btn{
+        display: block;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .navbar.active{
+        position: absolute;
+        top: 10%;
+        right: 50%;
+    }
+    
+    .link{
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .accueil{
+        margin: 0 2em;
+        text-align: center;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .text-wlcome{
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+    }
+
+    /*A propos*/
+    #apropos{
+        padding: 25px 10px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .apropos{
+        padding: 0 10%;
+    }
+
+    .img-cadre{
+        display: none;
+    }
+
+    .img-cadre img{
+        height: 250px;
+        width: 75%;
+    }
+    
+    .cadre{
+        right: 10%;
+        top: 80%;
+    }
+
+    /*Les menus*/
+    .search{
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .container .search-bar{
+        width: 250px;
+    }
+
+    #special{
+        background-position-x: center;
+        padding: 25px 100px;
+    }
+    
+    .menu-items{
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        width: 175px;
+        flex: 1 1 175px;
+        max-width: 175px;
+    }
+
+    #special h3, 
+    #reserve h3{
+        margin: 1em auto 1em;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+    }
+    
+    .speciality{
+        flex-wrap: wrap;
+    }
+    
+    .img-plat{
+        height: 100px;
+        width: 100%;
+    }
+    
+    .menu-items{
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 2px;
+        border-radius: 5px;
+    }
+
+    .img-plat{
+        height: auto;
+        width: 100%;
+    }
+    
+    .buy{
+        width: 100%;
+    }
+    
+    .plat-special{
+        /*flex: 0 0 calc(33.33% - 10px);*/
+        padding: 1em 10px 0;
+    }
+
+    /*Partie de contact*/
+    
+    #contact{
+        height: auto;
+        padding: 25px;
+    }
+    .contact{
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .nom-email{
+        flex-direction: column;
+    }
+
+    .nom-email input{
+        width: 65vw;
+    }
+
+    /*Reservation*/
+    #reserve{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px 50px;
+        gap: 2em;
+    }
+
+    .speciality{
+        flex: block;
+        margin: 20px;
+    }
+    
+    .menu-items{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /*Footer*/
+    footer{
+        padding: 10px 50px 20px;
+        width: 100%;
+    }
+    footer #other-contact{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 610px){
+    /*Header*/
+    .chefCuisinier,
+    .img-cadre,
+    .contact-img{
+        display: none;
+    }
+
+    .text-wlcome{
+        padding: 10px 110px;
+    }
+
+
+    /*A propos*/
+    #apropos{
+        align-items: center;
+        height: auto;
+    }
+
+    .apropos{
+        padding: 25px 5%;
+        text-align: center;
+    }
+
+    /*Contact*/
+    .contact{
+        padding: 25px 0;
+    }
+
+    .text-contact{
+        padding: 0 50px;
+    }
+}

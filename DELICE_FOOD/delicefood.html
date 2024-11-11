@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="delicefoodstyle.css">
+    <link rel="icon" type="image/png" href="images/bg (2).png">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initialize&libraries=places" async defer></script>
+    <title>Resto Custo</title>
+</head>
+
+<body>
+    <div id="loading" class="spinner-4"></div>
+    <main id="content" class="hero" style="display: none;">
+        <section id="header" class="d-flex flex-column gap-5">
+            <header class="d-flex justify-content-between align-items-center site-header">
+                <span class="hamburger-btn material-symbols-rounded">menu</span>
+                <span class="close-btn material-symbols-rounded">close</span>
+                <h2 class="nameResto">Resto Custo</h2>
+                <nav class="justify-content-center align-items-center navbar">
+                    <ul class="align-items-center link">
+                        <li><a href="#apropos" class="nav_link active">A&nbsp;propos</a></li>
+                        <li><a href="#special" class="nav_link">Specialite</a></li>
+                        <li><a href="#contact" class="nav_Link">Contacter</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="accueil" class="d-flex justify-content-between align-items-center accueil">
+                <div class="d-flex flex-column gap-3 text-wlcome" style="width: 650px;">
+                    <h1 style="font-size: 38px;">
+                        Bienvenue chez Resto Custo By SFM
+                    </h1>
+                    <p style="font-size: 15px;">Decouvrez les mets les plus seduisant food delivery service line doodle style icon vector illustration Fast food restaurant worker ready gives a customer order at a drive thru window. Hand drawn style vector design illustrations.
+                        Food delivery Doodle vector icon set. Drawing sketch illustration hand drawn line</p>
+                    <button id="exploreMenu" style="width: 15em;"><a href="#menu">Explorer nos menus</a></button>
+                </div>
+                <div class="chefCuisinier">
+                    <img src="images/bg (1).png" alt="chef_cuisinier" height="400px" width="100%">
+                </div>
+            </div>
+        </section>
+        <section id="apropos" class="d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-column apropos">
+                <h3>A propos</h3>
+                <p>Bienvenue chez Resto Custo By SFM, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit omnis provident, earum deserunt adipisci rem assumenda laudantium aperiam sed, error vitae, natus ut consectetur! Fugiat
+                    perspiciatis veritatis quod illum facilis. Bienvenue chez Resto CustoBy SFM, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit omnis provident, earum deserunt adipisci rem assumenda laudantium aperiam sed,
+                    error vitae, natus ut consectetur! Fugiat perspiciatis veritatis quod illum facilis.
+                </p>
+            </div>
+            <div class="slide-in img-cadre">
+                <img src="images/reser/reserve (2).jpg" alt="Interieur du resto">
+                <div class="cadre"></div>
+            </div>
+        </section>
+        <section id="special" class="d-flex flex-column justify-content-center align-items-center">
+            <!-- <div class="d-flex align-items-center search">
+                <h3>Nos Specialités restaurant</h3>
+                <input class="search-bar" type="text" placeholder="Rechercher un plat ici...">
+            </div> -->
+            <div class="d-flex align-items-center search">
+                <h3>Nos Specialités restaurant</h3>
+                <div class="body">
+                    <div class="container">
+                        <input class="search-bar" type="text" name="search" placeholder="Rechercher un plat ici..." />
+                        <b><i class="bi bi-search"></i></b>
+                    </div>
+                </div>
+            </div>
+            <div class="speciality">
+            
+            </div>
+        </section>
+        <section id="contact">
+            <div class="d-flex justify-content-between align-items-center contact">
+                <div class="d-flex flex-column">
+                    <div class="text-contact">
+                        <h3>Nous Contacter</h3>
+                        <p>Posez nous vos question ou preoccupation ? Discutez avec nous</p>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center img-contact">
+                        <img class="contact-img" src="images/contact.png" alt="contacter-nous" height="300px" width="auto">
+                    </div>
+                </div>
+                <form class="d-flex flex-column gap-3 formulaire">
+                    <div class="d-flex gap-3 justify-content-center align-items-center nom-email">
+                        <div class="d-flex flex-column">
+                            <label>Nom :</label>
+                            <input type="text" class="input-name" placeholder="Entrer votre nom ici" maxlength="50">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label>Email :</label>
+                            <input type="email" class="input-email" placeholder="Entrer votre email ici" maxlength="25">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <label>Message</label>
+                        <input type="text" class="input-message">
+                    </div>
+                    <div id="map" style="height: 400px; width: 100%;"></div>
+                    <button>Envoyer</button>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <section id="other-contact" class="d-flex justify-content-between align-items-center gap-5">
+                <div class="d-flex flex-column justify-content-center pied-page">
+                    <h5>ABOUT&nbsp;US</h5>
+                    <p>Contactez ou suivez nous egalement via nos different reseau sociaux</p>
+                    <div class="d-flex gap-3 align-items-center liens">
+                        <a class="bi bi-facebook"></a>
+                        <a class="bi bi-instagram"></a>
+                        <a class="bi bi-twitter"></a>
+                    </div>
+                </div>
+                <div class="d-flex flex-column justify-content-center pied-page">
+                    <h5>LIENS&nbsp;DU&nbsp;SITE</h5>
+                    <li><a href="#apropos" class="nav_link active">A&nbsp;propos</a></li>
+                    <li><a href="#special" class="nav_link">Specialite</a></li>
+                    <li><a href="#contact" class="nav_Link">Contacter</a></li>
+                </div>
+                <div class="d-flex flex-column justify-content-center pied-page">
+                    <h5>UNE&nbsp;QUESTIONS&nbsp;?</h5>
+                    <div class="d-flex justify-content-between">
+                        <a href="" class="d-flex justify-content-between gap-2 other-info">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>4100 Douala, Bonaberie, Carrefour Aladji</p>
+                        </a>
+                    </div>
+                    <div class="d-flex gap-1">
+                        <a href="" class="d-flex justify-content-between gap-2 other-info">
+                            <i class="bi bi-telephone-fill"></i>
+                            <p>+237 653 954 179</p>
+                        </a>
+                    </div>
+                    <div class="d-flex gap-1">
+                        <a href="" class="d-flex justify-content-between gap-2 other-info">
+                            <i class="bi bi-envelope-fill"></i>
+                            <p>franckmaniche6@gmail.com</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <p class="copyright">@Copyright 2024 By Skills For Modernity</p>
+        </footer>
+    </main>
+    <script src="delicefood.js"></script>
+</body>
+</html>

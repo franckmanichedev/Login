@@ -1,0 +1,467 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    transition: 0.5s;
+}
+
+li{
+    list-style: none;
+}
+
+a:hover{
+    color: yellow;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid rgb(255, 217, 0);
+}
+
+button{
+    height: 3rem;
+    width: 15rem;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(255, 217, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(233, 230, 230);
+    border: 3px solid black;   
+}
+
+h3{
+    font-size: 35px;
+    padding-bottom: 2rem;
+}
+
+/* MISE EN FORME DE L'accueil */
+
+header{
+    padding: 0.7rem 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    box-shadow: 2px 4px 6px rgba(255, 255, 255, 0.5);
+    color: white;
+    position: fixed;
+    z-index: 10000;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0 2rem 0;
+    gap: 3rem;
+}
+
+.active{
+    color: yellow;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid rgb(255, 217, 0);
+}
+
+#accueil{
+    background-image: url('images/toof.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 40rem;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+}
+
+#accueil h1{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 3rem;
+}
+
+#accueil p{
+    font-size: 15px;
+    padding-bottom: 2rem;
+}
+
+main{
+    z-index: 1000;
+}
+/* MISES EN FORME DE A PROPOS */
+
+#apropos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    padding: 3rem 1rem;
+}
+
+#apropos h3{
+    padding-bottom: 3rem;
+}
+
+#apropos p{
+    padding-bottom: 1rem;
+}
+
+/* MISES EN FORME DE NOS PLATS */
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+#menu div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-items {
+    flex-direction: column;
+}
+
+.menu-items:hover{
+    opacity: 0.5;
+}
+
+.menu-items:active{
+    transform: scale(0.96);
+}
+
+#menu img{
+    position: relative;
+    height: 400px;
+    width: 350px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-items .plat-special{
+    text-align: center;
+    transition: 0.5s;
+}
+
+.menu-items .plat-special:hover{
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    opacity: 1;
+}
+
+/* MISES EN FORME DE NOS SPECIALITES */
+
+#special{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+#special div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.special-items{
+    flex-direction: column;
+}
+
+#special img{
+    position: relative;
+    height: 400px;
+    width: 350px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#special img:hover{
+    opacity: 0.5;
+}
+
+.special-items .plat-special{
+    text-align: center;
+    opacity: 0;
+}
+
+.special-items .plat-special:hover{
+    cursor: none;
+    color: white;
+    font-weight: bold;
+    opacity: 1;
+}
+
+/* MISES EN FORME DE RESERVATIONS */
+
+#reserve{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+    gap: 30rem;
+}
+    
+#reserve h3{
+    padding-bottom: 5rem;
+    text-align: center;
+}
+    
+#reserve form{
+    height: auto;
+    width: 100%;
+}   
+
+#reserve form input{
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: grey;
+    border: none;
+    border-radius: 3px;
+    padding: 0 0.5rem;
+    color: white;
+}
+
+#reserve form div p{
+    margin-bottom: 0.5rem;
+}
+
+.curseur{
+    cursor: text;
+    color: white;
+}
+
+/* MISES EN FORME DE CONTACTER */
+
+#contact{
+    margin: 0 auto;
+    padding: 2rem 7rem;
+    gap: 30rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(61, 60, 60);
+    width: 100%;
+}
+    
+#contact .text-contact{
+    padding-bottom: 2rem;
+    text-align: left;
+}
+
+
+    
+#contact form{
+    background-color: white;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 5px;
+}   
+
+#contact form input{
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 0 0.5rem;
+    color: rgb(0, 0, 0);
+}
+
+#contact form div p{
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+#contact form .texte input{
+    height: 7rem;
+    font-size: 25px;
+}
+
+#other-contact {
+	width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    background-color: rgb(61, 60, 60);
+}
+
+.liens{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 15rem;
+}
+
+.liens img{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.liens img:nth-child(3){
+    width: 60px;
+}
+
+.liens img:nth-child(1):hover{
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.liens img:nth-child(2):hover{
+    background: linear-gradient(to right, rgb(255, 0, 212), rgb(212, 0, 255), rgb(132, 0, 255));
+    border-radius: 50%;
+}
+
+.liens img:nth-child(3):hover{
+    background-color: red;
+    border-radius: 15px;
+}
+
+/* MISES EN FORME DU FOOTER */
+
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+    /* MISE EN FORME DU HEADER */
+
+    body{
+        width: 100%;
+    }
+
+    header nav ul{
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #accueil{
+        width: 100%;
+    }
+
+    /* MISE EN FORME A PROPOS */
+
+    #apropos{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    /* MISE EN FORME DE PLATS */
+
+    #menu div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* MISE EN FORME DE SPECIALITES */
+
+    #special div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* MISE EN FORME DE RESERVATION */
+
+    #reserve{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2em;
+    }
+
+    /* MISE EN FORME DE CONTACT */
+
+    .text-contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact{
+        padding: 0;
+    }
+
+    /* MISE EN FORME DE OTHER_CONTACT */
+
+    #other-contact h3{
+        font-size: 20px;
+    }
+
+    .liens{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1em;
+        gap: 3em;
+    }
+
+    .liens img{
+        height: 25px;
+        width: 25px;
+    }
+
+    .liens img:nth-child(3){
+        width: 30px;
+    }
+    
+    .liens img:nth-child(1){
+        background-color: blue;
+        border-radius: 50%;
+    }
+    
+    .liens img:nth-child(2){
+        background: linear-gradient(to right, rgb(255, 0, 212), rgb(212, 0, 255), rgb(132, 0, 255));
+        border-radius: 50%;
+    }
+    
+    .liens img:nth-child(3){
+        background-color: red;
+        border-radius: 7px;
+    }
+
+    /* MISE EN FORME DU FOOTER */
+
+    footer{
+        text-align: center;
+    }
+
+    footer p{
+        font-size: 13px;
+    }
+}
